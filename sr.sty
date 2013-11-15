@@ -1,0 +1,148 @@
+\ProvidesPackage{sr}
+          [2007/08/22 v4.3 Standing Reg Generator]
+\renewcommand \thepart {\@Roman\c@part}
+\renewcommand \thechapter {\@Roman\c@chapter}
+\renewcommand \thesection {\@arabic\c@section}
+\renewcommand\partname{BOOK}
+\newcommand\sectionname{Section}
+\renewcommand\part{%
+%  \if@openright
+%    \cleardoublepage
+%  \else
+%    \clearpage
+%  \fi
+  \thispagestyle{plain}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+%  \null\vfil
+\vskip 25\p@
+  \secdef\@part\@spart}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\partname\space\numberline{\thepart}\hspace{-0.2em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\bfseries \partname\nobreakspace\thepart\space--\space #2\par
+%       \par
+%       \vskip 20\p@
+     \else
+       \huge\bfseries #2\par
+     \fi}%
+%     \Huge \bfseries #2\par}%
+    \@endpart}
+\def\@spart#1{%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \Huge \bfseries #1\par}%
+    \@endpart}
+\def\@endpart{%\vfil\newpage
+\vskip 25\p@
+              \if@twoside
+               \if@openright
+                \null
+                \thispagestyle{empty}%
+                \newpage
+               \fi
+              \fi
+              \if@tempswa
+                \twocolumn
+              \fi}
+\renewcommand\chapter{\vskip 10\p@
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         \addcontentsline{toc}{chapter}%
+                                   {\@chapapp\space\protect\numberline{\thechapter}\hspace{1.1em}#1}%
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+\def\@makechapterhead#1{%
+  %\vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \Large\bfseries \@chapapp\space \thechapter\space--\space#1\par\nobreak
+%        \par\nobreak
+%        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+%    \Huge \bfseries #1\par\nobreak
+    \vskip 10\p@
+  }}
+\def\@schapter#1{\if@twocolumn
+                   \@topnewpage[\@makeschapterhead{#1}]%
+                 \else
+                   \@makeschapterhead{#1}%
+                   \@afterheading
+                 \fi}
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+% \renewcommand\section{\@startsection {section}{1}{\z@}%
+%                                    {1ex}%
+%                                    {0.2ex}%
+%                                    {\normalfont\large\bfseries}
+% }
+\renewcommand\section{\vskip 4\p@
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@section\@ssection}
+\def\@section[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{section}%
+      \addcontentsline{toc}{section}{\sectionname\space\numberline{\thesection}#1}%
+    \else
+      \addcontentsline{toc}{section}{#1}%
+    \fi
+    \markboth{}{}%
+    {
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \normalfont\large\bfseries \sectionname\nobreakspace\thesection\space--\space #2\par
+%       \par
+%       \vskip 20\p@
+     \fi}%
+%     \Huge \bfseries #2\par}%
+    }
+    \def\Itemautorefname{article}
+    \def\chapterautorefname{Chapter}
+    \def\sectionautorefname{Section}
+    \def\partautorefname{Book}
