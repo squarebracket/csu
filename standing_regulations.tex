@@ -1,18 +1,26 @@
-%% LyX 2.0.2 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% CSU Code of Standing Regulations
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This document created by Chuck Wilson with the help of the internet
+%%
+%% TODO: Transition from mdwlist to enumitem
+%% TODO: Why are initial provisions not part*?
+%%
 \documentclass[oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{pdfpages}
 \usepackage{mdwlist}
-\pagestyle{plain}
 
-% \usepackage{lastpage} % for the number of the last page in the document
-% \usepackage{fancyhdr}
-% \pagestyle{fancy}
+%\usepackage{lastpage} % for the number of the last page in the document
+%\usepackage{fancyhdr}
+%\pagestyle{headings}
 % \fancyhf{}
 % \lhead{--- DRAFT ---}
 % \rhead{Section \thesection}
+
 
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
 \setcounter{secnumdepth}{3}
@@ -33,13 +41,13 @@
 
 \makeatother
 
-\begin{document}
+\title{CSU Code of Standing Regulations}
+% Consider using chngcntr package for this
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother 
 
-% \title{CSU Standing Regulations}
-% \date{August 12, 2013}
-% \author{CSU Council}
-% 
-% \maketitle
+\begin{document}
 
 \begin{titlepage}
 
@@ -49,16 +57,16 @@
 \vfill
 {\Huge Code of Standing Regulations}
 \vfill
-{\LARGE last updated on: \\August 12th, 2013}
-% \vfill
-% Digitally signed and certified as the official copy by
-% \begin{Form}
-%   \begin{tabular}{cc}
-%   \digsigfield{7cm}{3cm}{Chair's Signature} & \digsigfield{7cm}{3cm}{Secretary's Signature} \\
-%   Chair of the Corporation & Secretary of the Corporation \\
-%   Shannon Keys & Caitlin Robinson \\
-%   \end{tabular}
-% \end{Form}
+{\LARGE last updated on: \\ \today}
+%\vfill
+%Digitally signed and certified as the official copy by
+%\begin{Form}
+%  \begin{tabular}{cc}
+%  \digsigfield{7cm}{3cm}{Chair's Signature} & \digsigfield{7cm}{3cm}{Secretary's Signature} \\
+%  Chair of the Corporation & Secretary of the Corporation \\
+%  Nick Cuillerier & Caitlin Robinson \\
+%  \end{tabular}
+%\end{Form}
 \end{center}
 
 \end{titlepage}
@@ -67,7 +75,7 @@
 
 \pagebreak{}
 \setcounter{secnumdepth}{-2}
-\part{\label{DEFINITIONS}INITIAL PROVISIONS - DEFINITIONS}
+\part{\label{DEFINITIONS}INITIAL PROVISIONS -- DEFINITIONS}
 \begin{enumerate}
 \item ``Agenda'' means the order of business of a regular
 or special meeting, as defined in the latest edition of Robert's Rules
@@ -270,6 +278,7 @@ and Internal affairs for public notice;
 \item Secure a location for any regular, special or general meeting; 
 \item Keep the minute books of Council and its committees; 
 \item Act as Secretary of the Council-Elect; 
+\item Act as Secretary of the Judicial Board;
 \item Exercise such other powers and duties as he or she may be directed
 to perform by Council from time to time. 
 \end{enumerate}
@@ -567,6 +576,20 @@ study.
 \item The group must not charge a membership fee or if its membership is
 exclusive to Concordia students sell membership cards. 
 \end{enumerate}
+\item Notwithstanding article 64, a club may apply for recognition even though it contravenes 
+one or more of its listed requirements. To do so, it first requires approval by the CSU's 
+Clubs and Space Committee, followed by a 2/3 majority vote by Council in its favour. 
+Such an exemption is valid for a period of three (3) years and may be renewed following 
+the same process. Any club granted an exemption under this article must be entered 
+into Annex C of these Standing Regulations with the following information: the Club's 
+full name, the portion of Standing Regulation 64 that it is exempted from, the reason 
+why this exemption was granted, the date of the council meeting at which it was 
+approved, and the date on which it expires.
+\item Exemptions provided under article 64 may be revoked by Council before their expiry 
+date by a 4/5 majority vote to that effect. However, any club facing such a revocation 
+must be invited to speak at the meeting where such a vote is to take place at least 10 
+days before it is held. If such a revocation takes place, the club's entry in Annex C is to be 
+removed immediately.
 \item A group applying for recognition shall submit the following to the
 Vice-President Clubs and Internal Affairs:
 
@@ -1087,7 +1110,7 @@ student fees must clearly state the amount of the fee. The CEO's rejection
 of a referendum question should be submitted in writing without prejudice
 to the interested parties, Council and the Judicial Board. 
 \item Any referenda that seeks to introduce a student fee must be submitted
-to the Custodial and Services committee for review and approval at
+to the Policy committee for review and approval at
 least three months before it is to be considered by Council for the
 fall by-elections or the March general elections. 
 \suspend{enumerate}
@@ -1105,10 +1128,6 @@ The application must contain:
 
 \begin{enumerate}
 \item The group's constitution and regulations
-\begin{enumerate}
-\item \label{fee-levy-board-requirement} The constitution and/or regulations must state a majority of the board of directors voting seats shall be held by currently registered Concordia students. 
-\\ Notwithstanding, the above shall not apply to fee levies used to collect membership fees for multi-membership provincial or federal educational lobby groups.
-\end{enumerate}
 \item A list of at least 3 officers responsible for the organization 
 \item A petition in support of the fee levy's collection, containing the
 name, faculty, student ID number, and signature, of at least 750 undergraduate
@@ -1123,10 +1142,6 @@ the March general elections for it to be considered by Council. The
 application must include: 
 \begin{enumerate}
 \item The group's incorporation documents and general by-laws. 
-\begin{enumerate}
-\item \label{fee-levy-board-requirement-referenda} The constitution and/or regulations must state a majority of the board of directors voting seats shall be held by currently registered Concordia students. 
-\\ Notwithstanding, the above shall not apply to fee levies used to collect membership fees for multi-membership provincial or federal educational lobby groups.
-\end{enumerate}
 \item A list of at least 3 officers responsible for the organization. 
 \item An audit or review engagement prepared by an external accountant for
 the previous fiscal year. 
@@ -2040,34 +2055,77 @@ reasons by a majority vote at a Special Meeting called for that purpose.
 \suspend{enumerate}
 
 \part{\label{JUDICIAL_BOARD}JUDICIAL BOARD }
+\section{\label{JB_Administrative_proceedings}Administrative Proceedings}
 \resume{enumerate}
 \item Judicial Board shall function independently of Council and the Executive.
 It will have the autonomy to create its own administrative structure
 to carry out its activities. Any change to the administrative structure
-will be reported at the next regular meeting of Council. 
-\item No members of the Judicial Board may serve as executives on any CSU
-clubs, hold positions on any Concordia student or university associations,
-or be regular employees of any Concordia student or university associations. 
-\item Judicial Board shall be provided with an office with furniture, a
-telephone and a modern computer and printer with access to the Internet. 
-\item Judicial Board shall have access to a photocopier and a room where
-it can hold meetings for up to nine persons. 
+will be reported at the next regular meeting of Council and is subject to ratification 
+via a majority vote by Council. This vote of ratification should only be withheld
+under exceptional circumstances.
+\item The Judicial Board may dismiss a complaint if it feels that the complaint is not within
+the mandate of the Judicial Board. The Judicial Board will issue a brief written statement as 
+to why the complaint is not receivable or within the mandate of the Board. If the plaintiff 
+believes that they have new motives they must submit a new complaint that includes new evidence 
+which changes the nature of the complaint. No complaint shall be dismissed without the judicial
+board having met.
+\item A plaintiff may appeal the decision to dismiss a complaint to the Council of Representatives, 
+such an appeal requiring a four-fifths majority vote. In the event of an appeal, the complaint must 
+be heard by the Judicial Board, who shall be afforded a minimum of three (3) days notice.
+\item The Judicial Board shall be
+given priority access to the CSU Conference Rooms as well as any other booking
+requirements for the purpose of carrying out their duties.
 \item The Executive is responsible for allowing Judicial Board members access
-to the building after-hours. 
-\item Judicial Board members will be granted key access at all time to the
-CSU main office, the communications office as well as their own office. 
+to the building after-hours. At their request, Judicial Board members will be granted key
+access to both the CSU Office and the communications office.
+\item The Judicial Board secretary is responsible for noting attendance at all hearings. Should a 
+Judicial Board Member be asked to attend the hearing and fail to attend, the Chair of Judicial Board 
+shall request that the secretary note it in the minutes.
+\item All Judicial Board decisions are considered binding according to the provisions outlined
+in the Code of Procedures. Such decisions may only be appealed according to the provisions
+outlined in By-Law 8.3G.
+\suspend{enumerate}
+\section{\label{JB_finances}Finances}
+\resume{enumerate}
 \item Judicial Board will be granted annually a global budget of at least
 \$5,000, the final amount to be set by Council in the annual budget.
 2004-10-13 
 \item Judicial Board has the power to self-administer their budget and will
 report directly to the general manager. They must produce a mid-year
-and year-end report to the financial committee of Council. 
+and year-end report detailing their activities, the mid-year report to be submitted
+to the financial committee of Council, and the year-end report to be submitted to 
+Council no later than the 1st of May. 
 \item The general manager has the authority to suspend the power of self-administration
 of the Judicial Board if he or she suspects fraud, negligence or gross
-misconduct done by the Board. 
-\item The general manager will write a report for the next regular meeting
+misconduct done by the Judicial Board. The general manager will write a report for the next regular meeting
 of Council stating the reasons, length as well as conditions for ending
-the suspension. 
+the suspension.
+\suspend{enumerate}
+\section{\label{JB_removal}Removal of Judicial Board Members}
+\resume{enumerate}
+\item Judicial Board members are expected to display the highest level of integrity,
+impartiality, and professionalism. Failure to respect such standards may result in removal
+from the Judicial Board.
+\item Judicial Board Members may be removed for poor attendance. Poor attendance is
+defined as missing more than one hearing that such member was asked to attend. 
+\item Judicial Board Members may be removed if it is discovered that they benefited
+financially or otherwise through their participation in a case.
+\item Judicial Board Members may be removed if it is discovered that they have willingly
+acted in a manner which demonstrates a conflict of interest. Such a claim must include
+significant documented evidence that such intent was present. 
+\item Should a Judicial Board member believe they are in a position which constitutes a 
+conflict of interest, they must refrain from participating in the case.
+\item No Judicial Board Members may serve as executives on any CSU clubs, hold positions
+on any Concordia student or university associations, or be regular employees of any
+Concordia student or university associations. Should a Judicial Board member attain one of
+the aforementioned positions, it shall be considered a resignation from the Judicial Board.
+\item Judicial Board Members may resign on their own accord by sending notice to both the
+Judicial Board Chairperson and the Chairperson of the Council.
+\item All requests for the removal of a Judicial Board Member must be sent to both the
+Judicial Board Chairperson and the Chairperson of the Council of Representatives. The
+approval of such a removal is subject to a four-fifths majority vote by Council. No Judicial
+Board Member shall be removed without having been given an opportunity to be heard
+through being notified at least three (3) Days in advance.
 \suspend{enumerate}
 
 \part{\label{CUSACORP}CUSACORP }
