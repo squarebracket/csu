@@ -1,4 +1,4 @@
-csu
+CSU
 ===
 
-Holding all the CSU stuff I am working on
+Right now, this only exists to hold the changes to the standing regulations. Hopefully it'll have more soon?
